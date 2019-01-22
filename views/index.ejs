@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body class="row">
+
+    <% Data.forEach(function(Data) { %>
+
+    <div class="col-lg-6 col-md-6">
+        <div class="col s12 m6">
+            <div class="card">
+                <div class="card-image">
+                    <img src="<%= Data.avatar %>">
+                    <span class="card-title">
+                        <%= Data.first_name %>
+                    </span>
+                </div>
+                <div class="card-content">
+                    <%= Data.last_name %>
+                </div>
+                <div class="card-action">
+                    <a href="#">Link</a>
+                    <div class="valign-wrapper" style="font-size: 1.7em;">
+                        <i class="small material-icons" style="color:red">favorite</i>
+                        <%= Data.id %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <% }); %>
+</body>
+
+</html>
